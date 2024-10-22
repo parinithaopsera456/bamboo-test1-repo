@@ -1,0 +1,20 @@
+name: Test1
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Default_Job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+# No triggers equivalent to Bamboo's manual branch creation and deletion
+# No direct equivalent for Bamboo's JIRA linking feature
+# No direct equivalent for Bamboo's concurrent-build-plugin
+
+# Permissions cannot be directly translated to GitHub Actions YAML
+# Consider managing workflow access through GitHub repository settings
